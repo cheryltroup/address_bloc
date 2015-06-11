@@ -1,9 +1,9 @@
-def hello_world
+ def hello_world
 
-   ARGV.each do |arg, index| 
+   ARGV.each do |arg|
      puts "Hey, #{arg}!"
    end
    
-Hey Sterling Cheryl Lana
-
  end
+
+hello_world
