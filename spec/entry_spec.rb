@@ -1,4 +1,5 @@
- # #1
+ require_relative '../models/entry.rb'
+ 
  RSpec.describe Entry do
  # #2
    context "attributes" do
