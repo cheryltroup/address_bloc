@@ -2,7 +2,7 @@ require_relative '../models/address_book.rb'
 
 RSpec.describe AddressBook do  
 
-context "attributes" do
+  context "attributes" do
     it "should respond to entries" do
       book = AddressBook.new
       expect(book).to respond_to(:entries)
@@ -17,7 +17,7 @@ context "attributes" do
     book = AddressBook.new
     expect(book.entries.size).to eq 0
   end
-	end 
+  end 
 
   context ".add_entry" do
      it "adds only one entry to the address book" do 
@@ -36,8 +36,10 @@ context "attributes" do
        expect(new_entry.phone_number).to eq '010.012.1815'
        expect(new_entry.email).to eq 'augusta.king@lovelace.com'
      end
+  end
 
   context ".remove_entry" do
       it "removes one entry from address book" do       
-   end
+      end
+  end
 end
