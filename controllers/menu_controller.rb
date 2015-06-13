@@ -11,6 +11,7 @@ require_relative "../models/address_book"
    def main_menu
  # #2
      puts "Main Menu - #{@address_book.entries.count} entries"
+     puts "0 - View Entry #"
      puts "1 - View all entries"
      puts "2 - Create an entry"
      puts "3 - Search for an entry"
@@ -22,6 +23,10 @@ require_relative "../models/address_book"
      selection = gets.to_i
  # #7    
      case selection
+     when 0
+       system "clear"
+       view_entry
+       main_menu 
      when 1
        system "clear"
        view_all_entries
@@ -83,6 +88,20 @@ require_relative "../models/address_book"
      system "clear"
      puts "New entry created"
   end
+
+  def view_entry
+     system "clear"
+     puts "Select an Entry Number"
+     number = gets.to_i
+     if @address_book.entries.size > number
+       system "clear"
+       puts @address_book.entries[number].to_s
+     else
+     system "clear"
+     puts "Invalid Entry Number"
+     end
+  end
+
 
   def entry_submenu(entry)
  # #16
